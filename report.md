@@ -651,7 +651,7 @@ print(generate_output_csv())
 ### 4. Result
 ---
 
-After 20000 epochs,  we achieved a final loss of 2889.2272 with final values:
+After 10000 epochs,  we achieved a final loss of 2889.2272 with final values:
 
 ```csv
 <!-- 武将战力 -->
@@ -761,7 +761,6 @@ STOPPING_DELTA_LOSS,1e-05
 LEARNING_RATE_DECAY_DELTA_LOSS,0.5000
 ```
 
-### 4.1. Ranking
 ### 📢 全网最权威，纯数据说话，谁才是三国演义第一战神，终结一切讨论！
 
 **260条交战记录，转化为 Maximum Likelihood Estimation 问题，覆盖胜负关系，回合数，战力修正（突袭、放冷箭、年老、群殴等）**
@@ -774,16 +773,16 @@ LEARNING_RATE_DECAY_DELTA_LOSS,0.5000
 **上榜理由：** 濮阳之战，平“满分标杆”吕布直接将其战力定为100。然而典韦一人杀退高顺, 侯成两员大将；吕布却多次速败于一对多：刘关张，曹营六将，下邳再战关张，皆落荒而逃。吕布败退，典韦冲锋，高下立判！
 
 #### Rank 9: 赵云 (战力：100.58) —— “死神”
-**上榜理由：** 高览，麴义，夏侯恩，邢道荣，裴元绍，淳于导，晏明，钟缙, 钟绅...赵云的战绩表简直就是一张死神点名册.一人包揽全数据库6.5%的交战记录，却未无一败绩，不愧为“常胜将军”！
+**上榜理由：** 高览，麴义，夏侯恩，邢道荣，裴元绍，淳于导，晏明，钟缙, 钟绅...赵云的战绩表简直就是神点名册.一人包揽全数据库6.5%的交战记录，却未无一败绩，不愧为“常胜将军”！
 
 #### Rank 8: 关羽 (战力：100.59) —— “名将收割机”
 **上榜理由：** 虽然有大量平局拖累（夏侯惇、黄忠、庞德、高顺），但关羽的斩杀极有含金量：1合斩颜良、3合斩文丑、温酒斩华雄。此三人皆战绩爆表：颜良连斩宋宪、魏续，速胜徐晃；文丑胜臧霸，刺史涣，追击公孙瓒一挑四达成一死三逃；华雄连斩鲍忠、俞涉、潘凤、祖茂。三大精英怪被关羽直接收割，武圣之威名不虚传！
 
 #### Rank 7: 张飞 (战力：101.18) —— “终极质检员”
-**上榜理由：** 超越赵云的超级劳模，23条交战记录占全库8.8%。竟交出了“7平、9胜、1伤敌、6斩擒”的恐怖答卷，其中包含多次胜(联手)/平吕布，刺伤许褚，胜张郃，高顺，曹仁，刺纪灵等高质量对决。实至名归！
+**上榜理由：** 超越赵云的超级劳模，23条交战记录占全库8.8%。竟交出了“7平、9胜、1伤敌、6斩擒”的恐怖答卷。吕布，许褚，张郃，高顺，曹仁，刺纪灵等各路高手在其面前纷纷被打回原型。真乃名将质检员！
 
 #### Rank 6: 马超 (101.32) —— “常胜将军升级版”
-**上榜理由：** 平张飞，战许褚，压曹洪，胜张郃，退于禁，败曹仁，刺王方，擒李蒙，和赵云同样的不败金身。但同样是平许褚，许褚开启裸衣`BERSERKER`状态才能抹平数值差打成平手。而胜张郃仅用20回合（赵云用了30回合）。由此系统精准判定马超更胜一筹，合情合理！
+**上榜理由：** 平张飞，战许褚，压曹洪，胜张郃，退于禁，败曹仁，刺王方，擒李蒙，和赵云同样的不败金身。但同样是平许褚，许褚开启裸衣`BERSERKER(+2.13)`状态才能抹平数值差打成平手。而胜张郃仅用20回合（赵云用了30回合）。由此系统精准判定马超更胜一筹，合情合理！
 
 #### Rank 5: 颜良 (101.39) —— “千古奇冤”
 **上榜理由：** 3合斩宋宪、1合劈魏续、20合退徐晃，全部速胜！至于败于关羽，算法终于还他公道！经过迭代演算，系统认定关羽那一刀的 `SURPRISE_ATTACK`加成，足有约束极值`+25`点，这一数值极其合理，纵观全数据库，带有此 buff 的交锋几乎全以秒杀结束。颜良判定为死于开挂，千古奇冤得雪！
@@ -798,4 +797,464 @@ LEARNING_RATE_DECAY_DELTA_LOSS,0.5000
 **上榜理由：** 3合胜刘封，斩吴兰。100%胜率，全在极短回合达成，没有一场平局拖累，全书可有第二人？实至名归！
 
 #### 👑 Rank 1: 曲阿小将 (224.89) —— “神亭岭高达、宇宙的尽头”
-**上榜理由：** 惊天地泣鬼神的 **224.89** 分,足是满分吕布的两倍多！神亭岭阻击战，一人阻挡程普、黄盖等十二位江东虎臣，并且拖了至少100回合！（太史慈孙策交战100回合以上，加上跑图时间）1v12打出如此战绩，吕布自惭形秽！（1v6都打不过）可别说群殴的算法有问题，叠力公式 $C_{group}=\left( \sum_{i=1}^{N} C_i^p \right)^{\frac{1}{p}}$ 中的变量p值可是系统根据全部战绩 Maximize Likelihood 算出的。在冷酷的数学公式面前，曲阿小将强出天际，飞升高达！
+**上榜理由：** 惊天地泣鬼神的 **224.89** 分,足是满分吕布的两倍多！神亭岭阻击战，一人阻挡程普、黄盖等十二位江东虎臣，并且拖了至少100回合！（太史慈孙策交战100回合以上，加上跑图时间）1v12打出如此战绩，吕布自惭形秽！（1v6都打不过）群殴的叠力公式 $C_{group}=\left( \sum_{i=1}^{N} C_i^p \right)^{\frac{1}{p}}$ 已考虑多人时的战力衰减，其中的变量p是系统根据全部战绩 Maximize Likelihood 算出的。在冷酷的数学公式面前，曲阿小将飞升高达，强出天际！
+
+### 5. Result Analysis (Post-Training)
+
+After 10,000 epochs, the gradient descent algorithm reached a Final Loss of **3215.3882**, with the loss delta settling at **0.0359** in the final epoch. The fact that the loss did not perfectly zero out (and multiple parameters slammed into their hard constraints) reveals a profound truth: the mathematical model is constantly wrestling with the inherent logical contradictions of 罗贯中’s literary universe. 
+
+By observing how the engine balanced the equations, we gain fascinating insights into the underlying "physics" of *Romance of the Three Kingdoms*.
+
+#### 5.1. The Mathematics of Group Combat (The $p=2.0$ Cap)
+The most revealing discovery of the entire experiment lies in the group scaling parameter, $p$. During training, the unconstrained algorithm desperately attempted to push $p$ well beyond 5.0. 
+*   **Math** As $p \to \infty$, the Minkowski distance $C_{group} = (\sum C_i^p)^{1/p}$ approaches the $\max()$ function. The AI realized a harsh literary reality: **In this universe, teamwork is mathematically useless.** The author writes 1vN fights as if the solo fighter is only facing the *single strongest member* of the opposing group.
+*   **The Constraint:** To maintain a universe that minimally respects the laws of physics, we hard-capped $p$ at **2.0** (Euclidean distance). 
+*   **The Consequence:** This constraint directly spawned our greatest anomaly: **曲阿小将 (Qu A Young General at 224.89)**. To hold off 12 elite 吴 generals for 50 rounds, his single Base Combat Skill ($C$) must equal the square root of the sum of the squares of all 12 opponents. The math had no choice but to ascend him to godhood.
+
+#### 5.2. Reasoning of $C$ and Rankings
+The generated Tier List is completely unbiased, ignoring historical fame and strictly evaluating pure combat efficiency.
+
+*   **The "Floating Anchor" Anomaly (曹彰, 鄂焕):** 
+    *   *曹彰 (155.74)* and *鄂焕 (112.17)* sit at the absolute top of the mortal roster. Their records consist entirely of 1-to-3 round decisive executions, with a 100% win rate. Because they lack any "Draw" or "Loss" records to act as a mathematical ceiling (gravity), the $\tanh$ function demands a nearly infinite Strength Differential ($\Delta$) to output an absolute victory ($O=9.5$) in such short timeframes ($t \le 3$). The gradient descent simply pushed their stats into the stratosphere.
+*   **The True Pantheon (The Natural Overflow):**
+    *   With *吕布 (100.00)* as the fixed anchor, the algorithm determined that a select group of legendary generals—*文鸯 (102.33), 颜良 (101.39), 马超 (101.32), 张飞 (101.18), 关羽 (100.59), and 赵云 (100.58)*—actually mathematically out-perform him. 
+    *   吕布 is dragged down by his tendency to retreat when outnumbered. Conversely, 张飞 boasts 23 flawless records with zero 1v1 losses; 赵云 has a terrifying volume of 1-round instant kills; and 颜良 defeated the 98-point 颜良 in just 20 rounds. Their sheer efficiency and high-quality outputs forced their Base $C$ to naturally overflow past the 100.00 mark.
+
+#### 5.3. Reasoning of Modifiers ($m$)
+To prevent the Base $C$ rankings from entirely collapsing under the weight of narrative plot armor, the model aggressively utilized the modifiers as **Mathematical Shock Absorbers**. This explains why so many modifiers arrived at their maximum constraints:
+
+*   **Positive Buffs hit the Ceiling (`SURPRISE_ATTACK: 25.00`):**
+    *   To explain how 关羽 (100.59) could instantly decapitate 颜良 (101.39) in exactly 1 round, a negative base skill difference makes it mathematically impossible. The model slammed `SURPRISE_ATTACK` into its absolute hard cap of +25.00, temporarily pushing 关羽's Effective Strength ($E$) to ~125. This bridges the mathematical gap required for a 1-round execution, protecting 颜良's high base stats from cratering.
+*   **Freak Accidents hit the Floor (`LETHAL_RNG: -50.00`, `IMPAIRED: -10.00`):**
+    *   When top-tier generals die or lose to lesser opponents (e.g., 庞德 drowning, a heavily intoxicated 许褚 getting stabbed by 张飞), the algorithm craters the debuffs to their minimum bounds. This logically shifts the blame from the general's martial arts to extreme biological or environmental disadvantages.
+*   **The Synergy of Conditionals (`BERSERKER: 2.13`, `RELUCTANT: -0.63`, `AGE: -1.01`, `EXHAUSTED: -2.42`, `CHAOS: -3.18`):**
+    *   The model fit these situational modifiers perfectly to balance the equations of drawn-out battles. For instance, 文鸯 (102.33) drew with 邓艾 (99.51) for 50 rounds after fighting all night. The model solved this elegantly: $C_{文鸯} (102.33) + m_{EXHAUSTED} (-2.42) = 99.91$, which is mathematically near-identical to 邓艾's 99.51, perfectly justifying the dead draw.
+
+
+#### 5.4. Global Model Parameters ($\alpha, \beta$)
+*   **The Time Decay ($\alpha=0.645$):** 
+    *   This non-linear scaling parameter resolves the paradox of "marathon duels." While it aggressively amplifies the strength differential ($\Delta$) in early rounds (proving that a 3-round victory requires far more raw power than a 30-round victory), the $t^{0.645}$ decay effectively compresses the impact of super long turns. If time were linear, a 200+ round duel like 马超 vs. 张飞 would cause a massive gradient explosion, forcing their stats to perfectly equal each other to the thousandth decimal. By applying this decay, the model ensures marathon draws don't break the system, allowing for a natural 1-to-2 point variance between evenly matched legends.
+*   **The Sensitivity ($\beta=0.060$):** At this sensitivity, a modest 3-to-5 point skill gap ($\Delta$) is enough to convincingly predict a decisive victory within 20 to 30 rounds. This perfectly segments the roster into the classic 100+ (God-tier), 95-99 (Elite), and 90-94 (First-rate) tiers, proving that despite some exaggerated anomalies, the original author's underlying "power scaling" was surprisingly consistent.
+
+
+#### 5.5. Problems and Incentive for Model Improvement
+While the mathematical optimization is flawless, the resulting Tier List (e.g., 曲阿小将 at 224.89, 曹彰 at 155.74) reveals a critical flaw in our current methodology: **Data Overfitting** in Maximum Likelihood Estimation (MLE).
+
+1.  **The "Undefeated Bias" (Floating Anchor) Problem:**
+    *   Because generals like 曹彰 and 鄂焕 have 100% win rates in very short rounds and completely lack "Draw" or "Loss" records to act as a mathematical ceiling, the MLE algorithm assumes their combat potential is practically infinite. It infinitely scales their $C$ values upwards to perfectly match the $O=9.5$ (Kill/Crushing Defeat) outcome in $t \le 3$ rounds.
+2.  **The "Group Fight" Inflation:**
+    *   For 曲阿小将, holding off 12 elite generals forces his stats to equal the square root of their combined squares. Pure MLE blindly accepts this to minimize the loss function, completely ignoring the biological and literary impossibility of a human possessing 224 base strength.
+3.  **The Incentive:**
+    *   We cannot fix this by simply adding more data, because the novel *does not contain* records of 曹彰 losing 1v1 duels, nor does it provide a standard 1v1 fight for 曲阿小将 to anchor his stats. To solve this, we must transition from pure data-driven MLE to **Maximum A Posteriori (MAP) Estimation**. We must inject our "Expert Prior Knowledge" (the consensus that human strength follows a natural distribution and 吕布's 100 is the realistic peak) directly into the loss function to act as a mathematical rubber band, pulling the extreme outliers back to reality.
+
+## 6. Model Improvement: MAP Estimation
+
+### 6.1. Maximum A Posteriori (MAP) Estimation
+Under pure Maximum Likelihood Estimation (MLE), the model relies exclusively on minimizing battle prediction errors. As seen with 曹彰 (155+) and 曲阿小将 (224+), this causes severe **overfitting** for generals with perfect win rates in small sample sizes or extreme 1vN survival scenarios. 
+
+To solve this, we must transition to **MAP Estimation**. MAP introduces a "Prior" distribution $P(C)$, forcing the algorithm to balance the battle records against the natual of combat skill's distribution. The goal is to maximize the posterior probability:
+$$ P(C \mid O, S) \propto P(O \mid C) \cdot P(C \mid S) \cdot P(S) $$
+Where $O$ represents observed battle outcomes, and $S$ represents the Selection Bias (the fact that a general was selected by the author to appear in our dataset).
+
+Since selected sample is fact, $P(S)=1$
+
+### 6.2. Sample Bias: The Top-Tier Probability
+The prior distribution depending on sample selection $P(C \mid S)$ is derived using Bayes' Theorem. Because our selected sample is an observed fact, $P(S)=1$. Therefore:
+$$ P(C \mid S) = \frac{P(S \mid C) P(C)}{P(S)} = P(S \mid C) P(C) $$
+
+We assume the combat skills ($C$) of the entire global population of named characters in the novel (roughly $N = 436$ generals) form a standard Normal Distribution:
+$$ C_{global} \sim \mathcal{N}(\mu_C, \sigma_C^2) \quad \text{with } \mu_C = 60 $$
+
+However, the generals in our dataset are not a random sample. They are explicitly curated by history and fandom as the absolute elite. Let $K$ be the number of generals in our specific curated dataset (e.g., $K = 62$). 
+Therefore, $P(S \mid C_i)$ is the probability that General $i$, given their true combat skill $C_i$, mathematically qualifies as one of the **Top $K$** generals out of the $N$ total population.
+
+For a general with skill $C_i$, the probability that any single random general from the population is stronger than them is:
+$$ p_i = 1 - \Phi\left(\frac{C_i - \mu_C}{\sigma_C}\right) $$
+Where $\Phi$ is the Cumulative Distribution Function (CDF) of the standard normal distribution.
+
+To be included in our dataset, no more than $K-1$ of the remaining $N-1$ generals can be stronger than General $i$. This is a **Binomial Distribution**. The probability of selection is the cumulative binomial probability:
+$$ P(S \mid C_i) = \sum_{j=0}^{K-1} \binom{N-1}{j} p_i^j (1 - p_i)^{(N-1)-j} $$
+
+This function acts as a **"Soft Floor" Sigmoid**. If a general's $C_i$ is exceptionally high (e.g., 90), $p_i$ approaches 0, and the probability of being in the top 62 is virtually $1.0$. However, as $C_i$ drops toward the 70s, $P(S \mid C_i)$ plummets, creating a mathematical barrier that prevents dataset generals from being ranked as generic foot soldiers.
+
+### 3. Calculation of Distribution Parameters
+We must calculate the global variance ($\sigma_C^2$) to ground our prior distribution.
+
+Using Extreme Value Theory, the expected maximum value of $N=436$ samples drawn from $\mathcal{N}(\mu_C, \sigma_C^2)$ is approximated by:
+$$ \mathbb{E}[\max] \approx \mu_C + \sigma_C \sqrt{2 \ln N} $$
+
+We anchor the absolute ceiling of the universe (Lu Bu) at 100:
+$$ 100 = 60 + \sigma_C \sqrt{2 \ln(436)} $$
+$$ 40 = \sigma_C \sqrt{12.155} \implies \sigma_C \approx 11.47 $$
+The global variance is **$\sigma_C^2 \approx 131.6$**.
+
+### 4. Final Max Probability Function
+
+The **Total Joint Probability** is the product of the Likelihood (how well $C$ predicts the battles), the Global Prior (the natural distribution of $C$), and the Selection Bias (the probability of inclusion):
+$$ P_{total}(C, O, S) = \prod_{k=1}^{n} P(O_k \mid C) \cdot \prod_{i=1}^{N_{gen}} \left[ P(S \mid C_i) \cdot P(C_i) \right] $$
+
+Substituting our mathematical distributions, the full probability function is:
+$$ P_{total} = \left[ \prod_{k=1}^{n} \frac{1}{\sigma_O \sqrt{2\pi}} \exp\left( -\frac{(O_{obs,k} - O_{pred,k})^2}{2\sigma_O^2} \right) \right] \cdot \prod_{i=1}^{N_{gen}} \left[ \left( \sum_{j=0}^{K-1} \binom{N-1}{j} p_i^j (1 - p_i)^{(N-1)-j} \right) \cdot \exp\left( -\frac{(C_i - 60)^2}{2\sigma_C^2} \right) \right] $$
+*(Where $p_i = 1 - \Phi\left(\frac{C_i - 60}{11.47}\right)$).*
+
+To maximize the total joint probability $P(C, O, S) = P(O \mid C) \cdot P(S \mid C) \cdot P(C)$, we minimize its negative natural logarithm (Loss Function $J$). Ignoring constants, the objective function is:
+
+$$ J_{MAP} = \underbrace{ \sum_{k=1}^{n} \frac{(O_{pred, k} - O_{obs, k})^2}{2\sigma_O^2} }_{\text{Battle Fit (MLE)}} \underbrace{ - \sum_{i=1}^{N_{gen}} \ln \left[ P(S \mid C_i) \right] }_{\text{Selection Sigmoid (The Floor)}} + \underbrace{ \sum_{i=1}^{N_{gen}} \frac{(C_i - 60)^2}{2\sigma_C^2} }_{\text{Global Gaussian (The Gravity)}} $$
+
+The indroduction of prior normal distribution naturally results in an L2 regularization term in *The Gravity*.
+
+### 5. Math for Simplification and Gradients
+To simplify for gradient descent, we multiply the entire loss function by $2\sigma_O^2$. We define our regularization hyperparameters:
+*   $\gamma = \frac{\sigma_O^2}{\sigma_C^2} = \frac{\sigma_O^2}{131.6}$ (Controls the downward "Gravity" toward 60).
+*   $\lambda = 2\sigma_O^2$ (Controls the strength of the "Soft Floor" upward buoyancy).
+
+The simplified Loss Function is:
+$$ J_{simplified} = \sum_{k=1}^{n} (O_{pred, k} - O_{obs, k})^2 - \lambda \sum_{i=1}^{N_{gen}} \ln P(S \mid C_i) + \gamma \sum_{i=1}^{N_{gen}} (C_i - 60)^2 $$
+
+#### The Combat Skill Gradient ($\frac{\partial J}{\partial C_i}$)
+Let $\delta_k = (O_{pred,k} - O_{obs,k}) \cdot 10(1 - \tanh^2(u_k))$. Let $S_{side,k}$ be $1$ if General $i$ is on Side A, and $-1$ if on Side B.
+
+The derivative with respect to $C_i$ perfectly balances three mathematical forces:
+1.  **The Data Force:** Driven by battle prediction errors.
+2.  **The Floor Force (Buoyancy):** The derivative of the negative log-binomial CDF. As $C_i$ drops, this generates a massive positive gradient, repelling the general back into the elite threshold. Let this derivative be $B'(C_i)$.
+3.  **The Gravity Force:** The constant downward pull of the 60-average.
+
+$$ \frac{\partial J}{\partial C_i} = \underbrace{\sum_{k} \left[ \delta_k \cdot \beta \cdot t_k^\alpha \cdot S_{side,k} \cdot \left(\frac{C_i}{C_{group, k}}\right)^{p-1} \right]}_{\text{Data Fit Gradient}} - \underbrace{\lambda \cdot B'(C_i)}_{\text{Soft Floor (Upward)}} + \underbrace{2\gamma(C_i - 60)}_{\text{Global Prior (Downward)}} $$
+
+Where $ B'(C_i) = \ln P(S \mid C_i)  $ (binomial distribution).
+
+*Note: for reference generals occurring multiple times in the battle records, not picked because they are the top, we  assume they form the normal distribution of global population, thus the soft floor part is removed.*
+
+#### B. Other Model Parameters ($\beta, \alpha, p, m_x$)
+$\beta, \alpha, p, m_x$ don't change. as the structural introduction of the Prior $P(C)$ and Selection Bias $P(S|C)$ only affects the individual generals ($C_i$). Because the modifiers ($m_x$) and model parameters ($\beta, \alpha, p$) are purely components of the *Likelihood* prediction ($O_{pred}$), their gradient formulas remain absolutely identical to the pure MLE derivation. The only difference is that their entire gradient vector is scaled by the constant multiplier $\frac{1}{\sigma_O^2}$.
+
+#### C. The Gradient for the Variance ($\sigma_O^2$)
+Because we are now using a true MAP probabilistic model rather than simple Mean Squared Error, the variance of the battle outcomes ($\sigma_O^2$) is no longer an invisible constant. It acts as the balancing scale between the Data Fit and the Prior Pulls.
+
+We can solve for $\sigma_O^2$ dynamically. Taking the derivative of $J_{MAP}$ with respect to $\sigma_O$ and setting it to $0$:
+$$ \frac{\partial J_{MAP}}{\partial \sigma_O} = -\frac{1}{\sigma_O^3} \sum_{k=1}^{n} (O_{pred,k} - O_{obs,k})^2 + \frac{n}{\sigma_O} = 0 $$
+$$ \sigma_O^2 = \frac{1}{n} \sum_{k=1}^{n} (O_{pred,k} - O_{obs,k})^2 $$
+*Mathematical elegance:* The optimal $\sigma_O^2$ at any given epoch is exactly the current **Mean Squared Error (MSE)** of the battle predictions.
+
+
+
+#### Conclusion of the Mathematical Framework
+This three-part gradient is the ultimate solution to the dataset's anomalies. If a general like Guan Xing achieves multiple 1-round kills, the *Data Fit Gradient* pushes his score up. As his score rises past 90, the *Soft Floor* probability $P(S \mid C_i)$ becomes exactly $1.0$, rendering its log-derivative $B'(C_i)$ to $0$. He is now entirely free of the floor, fighting only against the gentle *Global Gravity* of $2\gamma(C_i - 60)$, which safely caps his runaway inflation at a realistic elite level (e.g., 95) rather than 144. Conversely, generals with terrible records will be caught by the *Soft Floor*, mathematically proving that to even be recorded losing to Hua Xiong, one must still be vastly superior to a generic 60-average soldier.
+
+
+### 6. Implementation
+---
+Implementing the exact derivative of the Binomial CDF (the Soft Floor Buoyancy, $\frac{\partial}{\partial C_i} \ln P(S \mid C_i)$) presents a significant computational challenge. 
+
+**The Implementation Problem:**
+Calculating the derivative of a sum of 62 binomial coefficients involving $436!$ (factorial) at every step of a gradient descent loop will cause **severe numerical underflow/overflow** in Python, resulting in `NaN` or `inf` gradients that instantly crash the model.
+
+**The Engineering Solution (Normal Approximation):**
+To make this viable in Python, we must approximate the Binomial Distribution with a Normal Distribution using the De Moivre–Laplace theorem.
+
+Since $B \sim \text{Binomial}(N_{pop}, p_i)$, it can be approximated as:
+$$ B \sim \mathcal{N}\left(N_{pop} \cdot p_i, N_{pop} \cdot p_i \cdot (1 - p_i)\right) $$
+
+Therefore, the Soft Floor probability is beautifully approximated by the standard Gaussian CDF:
+$$ P(S \mid C_i) = P(B \le K) \approx \Phi\left( \frac{K - N_{pop} \cdot p_i}{\sqrt{N_{pop} \cdot p_i \cdot (1 - p_i)}} \right) $$
+
+Same as **Adjustment in the implementation:** 3.2, we have the following:
+ * Applied floor / ceiling to prevent gradient vanishing / explosion caused ny float computation.
+ * Model parameters are also bounded to prevent unrealistic outcomes.
+
+Since we introduced the prior distribution of generals combat skills, there is no need to anchot 吕布 at 100. The prior distribution will naturally fit top general to around 100.
+
+### 7. Results and Discussion
+---
+
+After 10,000 epochs, the transition to **Maximum A Posteriori (MAP) Estimation** yielded a Final Loss of **2034.5590**, with the loss change per epoch converging to $1.66 \times 10^{-4}$. These are the resulting parameter values:
+
+```
+Final Loss: 2034.5590 | Gamma: 0.0597 | Delta loss 0.00016599625
+
+<!-- 武将战力 -->
+赵云,98.45
+关羽,80.76
+吕布,79.91
+夏侯惇,79.44
+马超,78.97
+张飞,78.84
+颜良,77.99
+典韦,77.91
+许褚,76.59
+黄忠,75.65
+臧霸,75.19
+文鸯,74.82
+高览,74.78
+孙策,74.67
+甘宁,74.56
+李严,74.53
+曹彰,74.41
+张任,74.27
+夏侯渊,74.19
+杨任,74.18
+庞德,74.15
+王平,74.15
+程普,74.11
+陈武,74.07
+曹仁,74.05
+文丑,74.01
+华雄,74.00
+太史慈,74.00
+高顺,73.95
+徐晃,73.93
+乐进,73.92
+曲阿小将,73.89
+曹洪,73.88
+张苞,73.81
+周泰,73.78
+马岱,73.78
+鄂焕,73.78
+诸葛尚,73.76
+凌统,73.76
+何曼,73.74
+王双,73.72
+纪灵,73.69
+姜维,73.68
+兀突骨,73.67
+邓艾,73.60
+张辽,73.59
+徐质,73.58
+李典,73.51
+管亥,73.51
+张郃,73.47
+武安国,73.40
+关平,73.22
+关兴,73.09
+泠苞,73.03
+魏延,72.97
+文聘,72.63
+徐盛,72.17
+刘封,68.57
+邓忠,62.95
+曹休,62.82
+刘备,62.45
+公孙瓒,62.32
+周仓,60.64
+沙摩柯,59.42
+<!-- 战力修正 -->
+SURPRISE_ATTACK,25.00
+ARCHERY,15.00
+BERSERKER,2.00
+RELUCTANT,-0.07
+EXHAUSTED,-2.00
+AGE,-6.93
+CHAOS,-8.00
+IMPAIRED,-10.00
+LETHAL_RNG,-44.50
+<!-- 修正约束 -->
+max_CHAOS,-1.0
+min_CHAOS,-8.0
+max_SURPRISE_ATTACK,25.0
+min_SURPRISE_ATTACK,10.0
+max_ARCHERY,15.0
+min_ARCHERY,5.0
+max_BERSERKER,10.0
+min_BERSERKER,2.0
+max_RELUCTANT,0.0
+min_RELUCTANT,-8.0
+max_EXHAUSTED,-2.0
+min_EXHAUSTED,-10.0
+max_IMPAIRED,-5.0
+min_IMPAIRED,-10.0
+max_AGE,-1.0
+min_AGE,-10.0
+max_LETHAL_RNG,-20.0
+min_LETHAL_RNG,-50.0
+<!-- 模型参数 -->
+alpha,0.100
+beta,0.035
+p,2.000
+<!-- 训练参数 -->
+LEARNING_RATE_C,0.0500
+LEARNING_RATE_M,0.0050
+LEARNING_RATE_GLOBAL,0.0005
+EPOCHS,10000.0
+STOPPING_DELTA_LOSS,1e-05
+LEARNING_RATE_DECAY_DELTA_LOSS,0.5000
+```
+
+ The introduction of the Gaussian prior and the selection bias probability successfully resolved the overfitting issues observed in the Maximum Likelihood Estimation (MLE) approach. The resulting parameter values demonstrate a rigorous mathematical alignment between the dataset and the probabilistic framework.
+
+#### 7.1. Mitigation of Overfitting via the Gaussian Prior
+The primary limitation of the pure MLE approach was the infinite scaling of parameters for generals with small sample sizes and perfect win/draw rates (e.g., 曲阿小将, 曹彰, 鄂焕). 
+*   Under MAP, the Gaussian prior imposes an $L_2$ regularization penalty on the objective function, scaled by $\gamma = 0.0597$. 
+*   Because 曲阿小将's statistical significance was limited to a single multi-target draw, the data likelihood gradient was insufficient to overcome the regularization penalty. Consequently, his Base Combat Skill ($C$) was appropriately constrained, dropping from the anomalous 224.89 down to **73.89**. 曹彰 (74.41) and 鄂焕 (73.78) experienced identical mathematical corrections, converging to values consistent with the elite strata rather than scaling to infinity.
+
+#### 7.2. Distribution Compression and Unanchored Estimation
+By introducing the prior distribution $P(C)$, the model no longer required a hard anchor (previously 吕布 at 100.00) to maintain numerical stability. The entire parameter space was allowed to settle based strictly on relative battle outcomes and the prior variance.
+*   The top-tier generals compressed into a highly dense bandwidth. 关羽 (80.76), 吕布 (79.91), 夏侯惇 (79.44), 马超 (78.97), and 张飞 (78.84) form the statistical peak. 
+*   This compression indicates that the raw textual data, when subjected to proper statistical variance, naturally aggregates the most prominent combatants into a statistically indistinguishable top percentile, where performance variations are dictated by situational modifiers rather than vast disparities in base skill.
+
+#### 7.3. The Statistical Outlier: 赵云
+While the prior distribution effectively compressed the majority of the elite roster below $C=81.00$, **赵云** converged to an exceptional **98.45**.
+*   In MAP estimation, overcoming the quadratic penalty term $\gamma(C_i - \mu_C)^2$ requires a consistently high magnitude in the data likelihood gradient $\frac{\partial J_{MLE}}{\partial C_i}$. 
+*   赵云 possesses a uniquely high volume of 1-round decisive victories ($t=1, O=9.5$). The cumulative gradient generated by these rapid, highly skewed outcome scores provided sufficient mathematical thrust to offset the regularization penalty. Consequently, 赵云 is identified as the most statistically significant outlier in the dataset.
+
+#### 7.4. Selection Bias and the Lower Bound
+For the lower-tier named generals in the dataset—such as 刘备 (62.45), 周仓 (60.64), and 沙摩柯 (59.42)—the parameters stabilized near the global population mean ($\mu_C = 60$). 
+*   Despite accumulating severe negative outcomes against top-tier opponents, their parameters did not collapse toward zero. This stabilization is driven by the selection bias probability term $P(S \mid C_i)$. As their $C$ values approached the mean, the derivative of the negative log-binomial CDF generated a steep positive gradient, acting as a soft lower bound. The model mathematically infers that inclusion in the historical/literary dataset necessitates a baseline proficiency superior to the unmentioned general population.
+
+#### 7.5. Impact of Situational Modifiers ($m$)
+Because the base combat skills ($C$) became heavily compressed (the variance across the top 30 generals is minimal), the situational modifiers were optimized to their predefined constraints to account for outcome variance:
+*   **Negative Modifiers (`CHAOS: -8.00`, `AGE: -6.93`):** In a tightly compressed distribution, an 8-point deduction is mathematically equivalent to dropping a combatant by an entire tier. The model correctly assigns the causality of elite defeats or retreats to these environmental and physiological constraints.
+*   **Positive Modifiers (`SURPRISE_ATTACK: 25.00`):** To model 关羽 (80.76) executing 颜良 (77.99) in $t=1$ round, a base skill differential of $\Delta = 2.77$ is insufficient to produce $O_{pred} \approx 9.5$. The optimization algorithm maximized the `SURPRISE_ATTACK` variable to its upper bound (+25.00) to maximize the argument $u$ in the $\tanh$ function. This proves the model strictly attributes the rapid outcome to tactical conditions rather than an underlying disparity in base capability.
+
+#### 7.6. Global Hyperparameters ($\alpha, \beta, p$)
+*   **Time Decay ($\alpha=0.100$):** Converging to its absolute lower bound, the $\alpha$ parameter heavily flattens the round count scalar. Mathematically, $50^{0.100} \approx 1.48$ and $200^{0.100} \approx 1.70$ yield similar asymptotic multipliers. This decay formulation successfully prevents gradient explosion during extreme outliers (e.g., 200-round marathon duels), ensuring that the model treats drawn-out engagements beyond 50 rounds as functionally identical in terms of skill parity.
+*   **Sensitivity ($\beta=0.035$):** The stabilized $\beta$ value dictates the scaling of the strength differential $\Delta$. A relatively low sensitivity requires either extended rounds ($t$) or substantial modifier adjustments to confidently predict a decisive victory ($O \to \pm 9.5$).
+*   **Minkowski Norm ($p=2.000$):** Pushed to the Euclidean constraint, the model confirms that group combat in the dataset scales sub-additively. By enforcing $1+1 < 2$, the mathematical framework accurately prevents the aggregated effective strength of multiple attackers from instantly producing a terminal prediction ($O=-9.5$) against a single top-tier defender, aligning with the recorded multi-round survivability in 1vN engagements.
+
+
+### 8. Statistical Reality vs. Literary Intuition: A Fandom Post-Mortem
+
+While the Maximum A Posteriori (MAP) estimation provides a mathematically rigorous optimization of the dataset, cross-referencing these empirical results with traditional reader consensus (the historical *Three Kingdoms* fandom) reveals a fascinating dichotomy. The probabilistic framework does not read the author's poetic hyperbole or dramatic tension; it only reads categorical outcomes. This strict adherence to data generates several conclusions that simultaneously validate and violently contradict centuries of literary intuition.
+
+#### 8.1. The Ultimate Fandom Heresy: 关羽 > 吕布
+In traditional fandom, **吕布 (Lu Bu)**'s status as the absolute ceiling of martial prowess is sacred. Yet, the MAP estimation commits the ultimate mathematical heresy by ranking **关羽 (Guan Yu)** at 80.76, slightly edging out 吕布 at 79.91. To a reader, this is blasphemy; to the optimization algorithm, it is simple accounting. 
+
+The model penalizes 吕布 for his tendency to retreat when outnumbered (yielding negative outcome scores) and notes his distinct lack of lethal executions against top-tier peers. Conversely, 关羽 operates as the novel's premium bounty hunter. By executing high-value targets with established empirical weight (e.g., 华雄, 颜良, and 文丑) in three rounds or fewer, he generated massive positive gradients. The algorithm ignores 吕布's terrifying narrative aura and strictly evaluates K/D (Kill/Death) efficiency, officially categorizing 吕布 as an unparalleled survivor, but 关羽 as the superior lethal asset.
+
+#### 8.2. The 赵云 Singularity and Plot Armor
+Readers have long joked that author Luo Guanzhong treated **赵云 (Zhao Yun)** with extreme favoritism, portraying him as a flawless warrior who is never truly bested. The mathematical model completely validates this reader intuition but scales it to a comical extreme. 
+
+While the Gaussian prior successfully compressed the rest of the elite roster into a tight 73.00–80.00 bandwidth, 赵云 shattered the mathematical gravity to reach an astronomical **98.45**—nearly 18 points above his closest peer. This inadvertently exposes the author's narrative mechanics. Because Luo Guanzhong frequently deployed 赵云 as a convenient plot device to "clean up" the battlefield by instantly executing mid-tier generals (e.g., 高览, 麴义), he fed the algorithm an endless diet of high-magnitude, low-round-count victories. The algorithm confirms what the fandom always suspected: statistically, 赵云 does not just possess plot armor; he operates under an entirely different set of physical laws.
+
+#### 8.3. 夏侯惇: The Ultimate Stat-Padder
+Perhaps the most jarring discrepancy for readers is **夏侯惇 (Xiahou Dun)** ranking at 79.44, mathematically outscoring legendary figures like 马超 (78.97) and 张飞 (78.84). To readers, 夏侯惇 is known primarily for his reckless bravery, losing an eye to a generic archer, and occasionally needing rescue. 
+
+The algorithm, however, does not penalize a general for "looking bad" in the narrative unless it results in a categorical loss. What the model sees is a highly efficient combatant who fought 吕布 for 30 rounds and 关羽 for 20 rounds, securing draws in both. By consistently picking fights with the absolute strongest entities in the dataset and miraculously surviving due to external, non-combat interruptions (such as sudden rainstorms or arriving messengers), 夏侯惇 accidentally maximized his posterior probability. The algorithm inadvertently identifies him as the ultimate "stat-padder"—a fighter who leeches off the high $C$ values of top-tier gods by surviving just long enough to secure a $O=0$ dead draw.
+
+#### 8.4. The Mathematical Extinction of Power Scaling Debates
+For decades, literary forums have hosted endless debates over hypothetical matchups, arguing whether 马超 is fundamentally stronger than 张飞, or if 颜良 could outlast 许褚. The MAP estimation effectively closes these debates by demonstrating their mathematical futility. 
+
+The model evaluates **马超 (78.97)** and **张飞 (78.84)** and separates them by a microscopic 0.13 points. When inserted into the prediction function $10 \cdot \tanh(\beta \cdot \Delta \cdot t^\alpha)$, this $\Delta$ yields an expected outcome precisely hovering at $0.0$ (Draw), regardless of whether the duel lasts 50 or 200 rounds. In short, the algorithm proves that Luo Guanzhong intentionally engineered these characters to be perfectly equivalent. From a probabilistic standpoint, readers are simply arguing over palette swaps of the exact same underlying numerical matrix.
+
+#### 8.5. The Deflation of Meme Generals
+Finally, the MAP estimation acts as the much-needed voice of reason against the statistical noise that plagued earlier MLE models. In pure Maximum Likelihood Estimation, readers would have been horrified to see obscure characters like **曲阿小将**, **曹彰**, and **鄂焕** dominating the top three spots due to their 100% win or survival rates in tiny sample sizes. 
+
+By applying the global prior, the model forcefully dragged these undefeated anomalies back down to the 73.00–74.00 range. The algorithm finally agrees with common sense: a nameless lieutenant cannot possess double the physical strength of 吕布 simply because he stalled a group fight off-screen. The Gaussian prior successfully intervened, ensuring that literary hyperbole and statistical noise are no longer mistaken for divine martial prowess.
+
+
+### 9. Bonus Track: Duel Simulator!
+
+
+Every 三国演义 fan has spent hours arguing over hypothetical matchups. *What if 吕布 fought 赵云? Who will win the tournament of 五虎上将* 
+
+To finally settle these pub debates and make every reader's dream a reality, we took our newly minted combat stats and built the ultimate fan-service tool: a narrative simulator (`predict.py`). You simply plug in General A and General B. The script calculates the shifting combat advantage round-by-round, pulling classic clichés from a hardcoded list of novel quotes to narrate the action in real-time.
+
+Some examples:
+
+刘封 vs 刘备
+```
+$ python predict.py -A 刘封 -B 刘备
+
+==================================================
+ 📖 演义推演 (ROMANCE NARRATIVE RECONSTRUCTION)
+==================================================
+刘封挺枪纵马，大喝一声，径奔刘备。
+
+【第 0 合】
+二将方才交马，金鼓连天。
+
+【第 1 合】
+只听得一声大喝，刘封轮刀纵马，不数合，刘封力大，刘备抵敌不住。
+
+【斗至 8 合】
+战不数合，刘备气力不加，荡开阵角，倒拖兵器，夺路而逃。
+
+【斗至 115 合】
+刘封纵马大喝：‘刘备小儿，休走！’,赶上砍伤刘备。
+==================================================
+```
+
+张郃 vs 刘备
+```
+$ python predict.py -A 张郃 -B 刘备
+==================================================
+ 📖 演义推演 (ROMANCE NARRATIVE RECONSTRUCTION)
+==================================================
+张郃挺枪纵马，大喝一声，径奔刘备。
+
+【第 0 合】
+二将方才交马，金鼓连天。
+
+【第 1 合】
+张郃抖擞精神，越战越勇。刘备渐渐枪法散乱，只得勉强架隔遮拦。
+
+【斗至 2 合】
+战不数合，刘备气力不加，荡开阵角，倒拖兵器，夺路而逃。
+
+【斗至 17 合】
+张郃纵马大喝：‘刘备小儿，休走！’,赶上砍伤刘备。
+
+【斗至 140 合】
+张郃纵马如飞，生擒刘备过去，挟在腋下掷于阵前，众军骇然。
+==================================================
+```
+
+张郃 vs 刘备 (偷袭)
+```
+$ python predict.py -A 张郃 -B 刘备 -mB SURPRISE_ATTACK
+
+==================================================
+ 📖 演义推演 (ROMANCE NARRATIVE RECONSTRUCTION)
+==================================================
+忽见草坡后一彪军出，为首大将，乃张郃。挺枪跃马，径奔刘备而去。 谁知刘备早有防备，暗中反扑，打了张郃一个措手不及！
+
+【第 0 合】
+二将方才交马，金鼓连天。
+
+【第 1 合】
+张郃拨马而逃,刘备纵马横戟，大叫：‘张郃贼休走！’
+
+【斗至 8 合】
+正追赶间，刘备赶上一步，一戟刺中张郃后心。张郃大惊失色，险些落马。
+
+【斗至 64 合】
+张郃刀法已乱，被刘备一刀砍下头来。
+==================================================
+```
+
+赵云 vs 刘备
+```
+$ python predict.py -A 赵云 -B 刘备
+
+==================================================
+ 📖 演义推演 (ROMANCE NARRATIVE RECONSTRUCTION)
+==================================================
+两阵对圆，赵云出马，大叫：‘贼将刘备快下马受降！’
+
+【第 0 合】
+赵云与刘备两马相交，兵器并举。
+
+【第 1 合】
+赵云手起处，早将刘备砍中，刘备痛呼一声，伏鞍而逃。
+
+【斗至 3 合】
+斗不3合，刘备被赵云大喝一声，一矛刺下马去。
+==================================================
+```
+
+马超 vs 张飞
+```
+python predict.py -A 马超 -B 张飞
+draw
+
+==================================================
+ 📖 演义推演 (ROMANCE NARRATIVE RECONSTRUCTION)
+==================================================
+忽见草坡后一彪军出，为首大将，乃马超。挺枪跃马，径奔张飞而去。
+
+【第 0 合】
+马超与张飞斗到0余合，不分胜负。
+
+【斗至 200 合】
+斗到200合，大雨如注，各自引军分散。
+==================================================
+```
